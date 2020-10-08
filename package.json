@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint src/**",
-    "lint-init": "eslint --init"
+    "lint-init": "eslint --init",
+    "success-message": "echo thanks for committing $GIT_AUTHOR_NAME"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +22,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test"
+      "pre-commit": "npm test",
+      "post-commit": "npm run success-message"
     }
   },
   "lint-staged": {
